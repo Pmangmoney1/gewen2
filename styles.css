@@ -344,6 +344,15 @@ footer nav ul li a:hover {
         text-align: center;
     }
 
+    .hero-section .app-buttons {
+        flex-direction: column; /* 모바일에서 버튼을 세로로 배치 */
+        align-items: center; /* 버튼을 중앙에 배치 */
+    }
+
+    .hero-section .app-buttons a {
+        margin-bottom: 10px; /* 버튼 사이에 여백 추가 */
+    }
+
     /* 푸터 버튼 세로 배치 */
     .footer-buttons {
         flex-direction: column;
