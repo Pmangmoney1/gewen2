@@ -3,13 +3,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f5f5f5;
+    background: url('source/background.jpg') no-repeat center center fixed; /* 배경 이미지 추가 */
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    font-weight: bold; /* 글씨체를 두껍게 설정 */
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8); /* 배경을 약간 투명하게 설정 */
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -54,7 +56,7 @@ header nav ul li a:hover {
 }
 
 .hero-section {
-    background-color: #ffebcc;
+    background-color: rgba(255, 235, 204, 0.8); /* 배경색을 약간 투명하게 설정 */
     padding: 100px 0 60px;
     text-align: center;
     position: relative;
@@ -93,12 +95,44 @@ header nav ul li a:hover {
 }
 
 .hero-section .app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* 버튼 사이의 간격 추가 */
     margin-bottom: 20px; /* 버튼과 비디오 사이 여백 추가 */
 }
 
-.hero-section .app-buttons img {
+.hero-section .app-buttons a {
+    display: inline-block;
     width: 150px;
-    margin: 10px;
+    height: 50px;
+    line-height: 50px; /* 텍스트를 가운데 정렬 */
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.kakao-button {
+    background-color: #FFD700; /* 찐노랑색으로 변경 */
+    color: #000;
+}
+
+.telegram-button {
+    background-color: #0088CC;
+}
+
+.call-button {
+    background-color: #FF0000;
+}
+
+.personal-telegram-button {
+    background-color: #0088CC;
+}
+
+.hero-section .app-buttons a:hover {
+    opacity: 0.8; /* 호버 효과 */
 }
 
 .hero-video-container {
@@ -121,7 +155,7 @@ header nav ul li a:hover {
 }
 
 .feature-section {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* 배경을 약간 투명하게 설정 */
     padding: 60px 0;
     text-align: center;
 }
@@ -183,7 +217,7 @@ header nav ul li a:hover {
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px 0;
-    background-color: #f5f5f5;
+    background-color: rgba(245, 245, 245, 0.8); /* 배경을 약간 투명하게 설정 */
 }
 
 .footer-button {
