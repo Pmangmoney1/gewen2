@@ -6,6 +6,7 @@ body {
     background: url('source/background.jpg') no-repeat center center fixed; /* 배경 이미지 추가 */
     background-size: cover; /* 배경 이미지 크기 조정 */
     font-weight: bold; /* 글씨체를 두껍게 설정 */
+    color: #000; /* 전체 글씨를 진한 검은색으로 설정 */
 }
 
 .header-container {
@@ -39,7 +40,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #000; /* 링크 글씨를 진한 검은색으로 설정 */
     font-weight: bold;
 }
 
@@ -83,13 +84,13 @@ header nav ul li a:hover {
 }
 
 .hero-section h1 {
-    color: #333;
+    color: #000; /* 제목 글씨를 진한 검은색으로 설정 */
     font-size: 2.5em;
     margin-bottom: 20px; /* 제목과 텍스트 사이 여백 추가 */
 }
 
 .hero-section p {
-    color: #777;
+    color: #000; /* 텍스트 글씨를 진한 검은색으로 설정 */
     font-size: 1.2em;
     margin-bottom: 20px; /* 텍스트와 버튼 사이 여백 추가 */
 }
@@ -181,6 +182,7 @@ header nav ul li a:hover {
     flex: 1;
     padding: 0 20px;  /* 좌우 패딩 값을 조정 */
     text-align: left;
+    color: #000; /* 글씨를 진한 검은색으로 설정 */
 }
 
 .feature-left img {
@@ -200,21 +202,21 @@ header nav ul li a:hover {
 }
 
 .feature h2 {
-    color: #333;
+    color: #000; /* 제목 글씨를 진한 검은색으로 설정 */
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 .feature p {
-    color: #777;
+    color: #000; /* 텍스트 글씨를 진한 검은색으로 설정 */
     font-size: 1em;
     line-height: 1.6;
 }
 
 .footer-buttons {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 20px 0;
     background-color: rgba(245, 245, 245, 0.8); /* 배경을 약간 투명하게 설정 */
@@ -230,12 +232,36 @@ header nav ul li a:hover {
     font-weight: bold;
     text-align: center;
     transition: background-color 0.3s;
-    width: 150px; /* 버튼 너비를 동일하게 설정 */
     text-align: center;
+}
+
+.footer-button.large-button {
+    width: 100%;
+    max-width: 600px; /* 최대 너비 설정 */
+    background-color: #4CAF50; /* 플레이포커 버튼의 다른 배경색 */
+    color: #fff; /* 텍스트 색상 */
+    text-align: center;
+}
+
+.footer-small-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.footer-button.small-button {
+    flex: 1 1 calc(25% - 10px); /* 4개의 버튼을 동일한 크기로 배치 */
+    max-width: calc(25% - 10px);
 }
 
 .footer-button:hover {
     background-color: #ff6f61;
+}
+
+.footer-button.large-button:hover {
+    background-color: #45a049; /* 플레이포커 버튼의 호버 색상 */
 }
 
 footer {
@@ -302,7 +328,25 @@ footer nav ul li a:hover {
 
     /* 푸터 버튼 가로 배치 */
     .footer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-small-buttons {
         flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-button.large-button {
+        width: 100%; /* PC에서 넓게 보이도록 설정 */
+        max-width: 600px; /* 최대 너비 설정 */
+    }
+
+    .footer-button.small-button {
+        flex: 1;
+        max-width: 150px; /* 특정 크기 이상으로 늘어나지 않도록 설정 */
     }
 }
 
@@ -361,5 +405,20 @@ footer nav ul li a:hover {
 
     .footer-button {
         margin: 5px 0;
+    }
+
+    .footer-small-buttons {
+        flex-direction: column;
+        align-items: center; /* 모바일에서 버튼을 중앙에 배치 */
+    }
+
+    .footer-button.large-button {
+        width: 100%;
+        max-width: 300px; /* 모바일에서 같은 크기로 설정 */
+    }
+
+    .footer-button.small-button {
+        width: 100%;
+        max-width: 300px; /* 모바일에서 같은 크기로 설정 */
     }
 }
